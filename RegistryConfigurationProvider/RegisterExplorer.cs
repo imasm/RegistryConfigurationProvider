@@ -19,13 +19,13 @@ namespace RegistryConfigurationProvider
             _regKey = Open(registryHive, regPath);
         }
 
-        private RegistryKey? Open(RegistryHive registryHive, string regPath)
+        private RegistryKey? Open(RegistryHive registryHive, string rootKey)
         {
             return registryHive switch
             {
-                RegistryHive.LocalMachine => Registry.LocalMachine.OpenSubKey(regPath),
-                RegistryHive.CurrentUser => Registry.CurrentUser.OpenSubKey(regPath),
-                _ => throw new ArgumentOutOfRangeException(nameof(registryHive)),
+                RegistryHive.LocalMachine => Registry.LocalMachine.OpenSubKey(rootKey),
+                RegistryHive.CurrentUser => Registry.CurrentUser.OpenSubKey(rootKey),
+                _ => throw new NotSupportedException($"{registryHive} is not suported"),
             };
         }
 

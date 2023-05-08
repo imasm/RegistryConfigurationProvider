@@ -14,7 +14,7 @@ namespace RegistryConfigurationProvider
 
         public override void Load()
         {
-            RegisterExplorer explorer = new RegisterExplorer(Source.RegistryHive, Source.KeyPath);
+            RegisterExplorer explorer = new RegisterExplorer(Source.RegistryHive, Source.RootKey);
             this.Data = explorer.ReadAll();
 
         }

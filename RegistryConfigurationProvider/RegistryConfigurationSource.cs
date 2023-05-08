@@ -1,19 +1,20 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Win32;
+using System.Globalization;
 
 namespace RegistryConfigurationProvider
 {
     public class RegistryConfigurationSource : IConfigurationSource
     {
         public RegistryHive RegistryHive { get; }
-        public string KeyPath { get; }
+        public string RootKey { get; }
 
-        public RegistryConfigurationSource(string keyPath) : this(RegistryHive.CurrentUser, keyPath) { }
+        public RegistryConfigurationSource(string rootKey) : this(RegistryHive.CurrentUser, rootKey) { }
 
-        public RegistryConfigurationSource(RegistryHive registryHive, string keyPath)
+        public RegistryConfigurationSource(RegistryHive registryHive, string rootKey)
         {
             this.RegistryHive = registryHive;
-            this.KeyPath = keyPath;
+            this.RootKey = rootKey;
         }
 
         public IConfigurationProvider Build(IConfigurationBuilder builder)
