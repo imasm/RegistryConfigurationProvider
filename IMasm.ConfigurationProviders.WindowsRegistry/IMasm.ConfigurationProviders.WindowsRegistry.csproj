@@ -4,13 +4,13 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>IMasm.RegistryConfigurationProvider</PackageId>
-    <Title>IMasm.RegistryConfigurationProvider</Title>
+    <PackageId>IMasm.ConfigurationProviders.WindowsRegistry</PackageId>
+    <Title>IMasm.ConfigurationProviders.WindowsRegistry</Title>
     <Authors>imasmitja</Authors>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <Product>RegistryConfigurationProvider</Product>
+    <Product>IMasm.ConfigurationProviders.WindowsRegistry</Product>
     <Description>Windows Registry configuration provider implementation</Description>
-    <Copyright>Copyright 2023 Ivan Masmitjà</Copyright>    
+    <Copyright>Copyright 2023 Ivan Masmitjà</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

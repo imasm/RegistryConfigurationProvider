@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Win32;
 
-namespace RegistryConfigurationProvider
+namespace IMasm.ConfigurationProviders.WindowsRegistry
 {
     public static class RegistryConfigurationExtensions
     {
         public static IConfigurationBuilder AddWindowsRegistry(this IConfigurationBuilder builder,
-            RegistryHive registryHive, string rootKey)
+            string rootKey, RegistryHive registryHive = RegistryHive.CurrentUser)
         {
-            var source = new RegistryConfigurationSource(registryHive, rootKey);
+            var source = new RegistryConfigurationSource(rootKey, registryHive);
             return builder.Add(source);
         }
     }

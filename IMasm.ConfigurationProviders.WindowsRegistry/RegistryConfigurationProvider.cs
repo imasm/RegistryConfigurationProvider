@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace RegistryConfigurationProvider
+namespace IMasm.ConfigurationProviders.WindowsRegistry
 {
     public class RegistryConfigurationProvider : ConfigurationProvider
     {

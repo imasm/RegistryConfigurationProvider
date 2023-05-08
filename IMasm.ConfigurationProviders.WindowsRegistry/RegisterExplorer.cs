@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace RegistryConfigurationProvider
+namespace IMasm.ConfigurationProviders.WindowsRegistry
 {
     internal class RegisterExplorer : IDisposable
     {
